@@ -1,0 +1,7 @@
+# Runtime dependencies for the CPU threaded-rollout MPPI controller.
+# The MJX/JAX/warp stack from the old GPU backend is intentionally gone:
+# planning now runs on mujoco.rollout (C++ threads), so there is no GPU compute.
+mujoco==3.8.1            # provides MjSpec (scene_builder) and the rollout module (planner)
+numpy
+opencv-python-headless   # video writing in simulate.py
+matplotlib               # optional spline plots in math_engine.py
